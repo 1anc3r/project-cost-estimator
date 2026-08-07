@@ -9,14 +9,24 @@
     </header>
 
     <div class="card-grid">
-      <el-card class="home-card" shadow="hover" @click="goTo('chengdu')">
-        <div class="card-icon chengdu-icon">
+      <el-card class="home-card" shadow="hover" @click="goTo('chengdu-T5')">
+        <div class="card-icon chengdu-icon-T5">
           <el-icon><MapLocation /></el-icon>
         </div>
-        <h2>成都市信息化项目费用测算</h2>
+        <h2>成都市信息化项目开发费用测算</h2>
         <p class="standard">DB5101/T 5—2018</p>
         <p class="desc">基于功能点法（ILF/EIF），支持复用度、软件因素调整、开发因素调整及直接非人力成本。</p>
         <el-button type="primary" size="large">进入测算</el-button>
+      </el-card>
+
+      <el-card class="home-card" shadow="hover" @click="goTo('chengdu-T6')">
+        <div class="card-icon chengdu-icon-T6">
+          <el-icon><MapLocation /></el-icon>
+        </div>
+        <h2>成都市信息化项目运维费用测算</h2>
+        <p class="standard">DB5101/T 6—2018</p>
+        <p class="desc">基于功能点法（ILF/EIF），支持运维水平、运维能力、运维系统特征及直接非人力成本。</p>
+        <el-button type="warning" size="large">进入测算</el-button>
       </el-card>
 
       <el-card class="home-card" shadow="hover" @click="goTo('sichuan')">
@@ -80,7 +90,7 @@ const goTo = (path: string) => {
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 20px;
 }
@@ -120,9 +130,14 @@ const goTo = (path: string) => {
     }
   }
 
-  .chengdu-icon {
+  .chengdu-icon-T5 {
     background: #e8f0fe;
     color: #1a3a5c;
+  }
+
+  .chengdu-icon-T6 {
+    background: #ffecb3;
+    color: #f57c00;
   }
 
   .sichuan-icon {
